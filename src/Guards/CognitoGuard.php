@@ -129,7 +129,7 @@ class CognitoGuard extends TokenGuard
         } //End if
 
         $accessToken = (string)$this->cognito->getToken();
-        return $this->client->getUserByAccessToken($accessToken);
+       return $this->client->getUserByAccessToken($accessToken);
 
     } //Function ends
 
@@ -154,12 +154,12 @@ class CognitoGuard extends TokenGuard
         } //End if
 
         //Get claim
-        $claim = $this->cognito->getClaim();
-        if (empty($claim)) {
+        $token = (string)$this->cognito->getToken();
+        if (empty($token)) {
             return null;
         } //End if
 
-        //Get user and return
-        return $this->user = $claim;
+        //get token and return
+        return $token;
     } //Function ends
 } //Class ends
