@@ -34,13 +34,9 @@ trait AuthenticatesUsers
      *
      * @return mixed
      */
-    protected function attemptLogin(Request $request, string $paramUsername = 'username', string $paramPassword = 'password')
+    protected function attemptLogin(Request $request, $guard = 'cognito-token', string $paramUsername = 'username', string $paramPassword = 'password')
     {
         try {
-            $request = collect($request->all());
-
-            $guard = 'cognito-token';
-
             //Get key fields
             $keyUsername = 'username';
             $keyPassword = 'password';
@@ -48,8 +44,8 @@ trait AuthenticatesUsers
 
             //Generate credentials array
             $credentials = [
-                $keyUsername => $request[$paramUsername],
-                $keyPassword => $request[$paramPassword],
+                $keyUsername => $request->get($paramUsername),
+                $keyPassword => $request->get($paramPassword),
             ];
 
             //Authenticate User
