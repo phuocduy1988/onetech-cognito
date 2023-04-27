@@ -36,9 +36,6 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "develop": "1.0.0"
-        },
         "laravel": {
             "providers": [
                 "Onetech\\Cognito\\CognitoServiceProvider"
