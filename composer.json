@@ -1,5 +1,5 @@
 {
-    "name": "onetech/cognito",
+    "name": "onetechasia/cognito",
     "description": "User manage / login / register / forgot password with aws cognito",
     "keywords": [
         "php",

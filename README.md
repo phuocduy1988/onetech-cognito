@@ -3,7 +3,7 @@
 You can install the package via composer.
 
 ```bash
-composer require onetech/cognito
+composer require onetechasia/cognito
 ```
 
 Next you can publish the config
