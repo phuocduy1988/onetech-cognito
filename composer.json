@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Onetech\\Cognito\\CognitoServiceProvider"
+                "Onetech\\Cognito\\Providers\\CognitoServiceProvider"
             ]
         }
     }
